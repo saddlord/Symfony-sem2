@@ -26,7 +26,7 @@
                             <strong>{{ artist.name }}</strong>
                         </a>
                         <br>
-                        {{ artist.description }}
+                        {{ artist.description|slice(0, 25) }}
                     </p>
                 </div>
             </div>
