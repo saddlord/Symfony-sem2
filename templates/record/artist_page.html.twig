@@ -6,10 +6,11 @@
 
 {% block content %}
     <div class="section">
-        <h1 class="title">Artiste: {{ artist.name }}
+        <h1 class="title">Artiste: {{ artist.name }}</h1>
         <p>{{ artist.description }}</p>
 
-    <h3 class="subtitle">Discographie: {{ artist.records|length}}</h3>
-    {% include "record/_record_list.html.twig" with {record_list: artist.records} %}
+        <h3 class="subtitle">Discographie: {{ artist.records|length }}</h3>
+        {% include 'record/_record_list.html.twig' with {record_list: artist.records} %}
     </div>
 {% endblock %}
+
