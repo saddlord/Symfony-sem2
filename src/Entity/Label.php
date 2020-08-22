@@ -29,11 +29,6 @@ class Label
      */
     private $records;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Label;
-
     public function __construct()
     {
         $this->records = new ArrayCollection();
@@ -83,18 +78,6 @@ class Label
                 $record->setLabel(null);
             }
         }
-
-        return $this;
-    }
-
-    public function getLabel(): ?string
-    {
-        return $this->Label;
-    }
-
-    public function setLabel(string $Label): self
-    {
-        $this->Label = $Label;
 
         return $this;
     }
